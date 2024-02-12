@@ -1,2 +1,12 @@
 # Smart-Attendance-Monitoring
 Smart Attendance Monitoring and Automated Certificate Generation for Events - Python Project
+
+The model architecture file “facenet_keras.h5” is not uploaded as github cannot except file above 25 MB. It can be downloaded from here. https://drive.google.com/file/d/1tyB_rAZoBBF_6Pv5LZ4mvygMoX1V761r/view?usp=sharing.
+
+Create an empty folder named 'generated-certificates' for storing the output certificates.
+Create folder 'ImageAttendance' with the images of students.
+
+In this project we are proposing a pretrained model for automated attendance marking using FaceNet algorithm for image recognition. This model is implemented for attendance marking in events, and addition to that an event participation certificate for the participants will be generated automatically as the output as per the template given.
+Here we are proposing pre -trained model FaceNet that developed by google researchers. FaceNet uses deep convolutional neural network (DCNN). Haar Cascade classifier is used for extracting face embbedings and they are very fast at computing features. Smart phone camera is used for capturing the images of the student. Here we are automatically generating certificate for participants, so it reduces the human effort. A template of the certificate for the event provided by the program coordinators will be given as input. The participants list (excel sheet) obtained from the model will be used for generating certificates using OpenCV library in python. The objective of the project is to build a smart attendance monitoring system with face recognition and automated certificate generation. The images of students of a class will be collected for training purpose. These images will be stored in a folder as dataset. Face features will be extracted using Haar Cascade Classifier and store in a pickle file. The model is trained on this dataset and face recognition will be done on these students. The attendance of the participants will be marked in this module. The participant’s face is captured using live camera. Smart phone camera or web camera can be used. The face features extracted will be compared with the pickle file. If matches the attendance will be marked and stored in an excel sheet along with the time they entered. This list will be used for generating the participant certificates.
+
+Run python files 'LoadFACENET', 'Attendance',and then 'certi' in order.
